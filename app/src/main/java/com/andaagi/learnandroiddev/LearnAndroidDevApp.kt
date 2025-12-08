@@ -16,6 +16,7 @@ import androidx.navigation.compose.composable
 import com.andaagi.learnandroiddev.screen.MenuScreen
 import com.andaagi.learnandroiddev.ui.theme.LearnAndroidDevTheme
 import androidx.navigation.compose.rememberNavController
+import com.andaagi.learnandroiddev.constant.Screen
 import com.andaagi.learnandroiddev.screen.ConceptScreen
 import com.andaagi.learnandroiddev.screen.QuizScreen
 import com.andaagi.learnandroiddev.screen.TopicScreen
@@ -38,26 +39,26 @@ fun LearnAndroidDevApp() {
         ) { innerPadding ->
             NavHost(
                 navController = navController,
-                startDestination = "menu_screen",
+                startDestination = Screen.MENU_SCREEN.getRouteId(),
                 modifier = Modifier.padding(innerPadding)
             ) {
-                composable("menu_screen") {
+                composable(Screen.MENU_SCREEN.getRouteId()) {
                     MenuScreen()
                 }
 
-                composable("quiz_screen") {
+                composable(Screen.QUIZ_SCREEN.getRouteId()) {
                     QuizScreen()
                 }
 
-                composable("topic_screen") {
+                composable(Screen.TOPIC_SCREEN.getRouteId()) {
                     TopicScreen()
                 }
 
-                composable("concept_screen") {
+                composable(Screen.CONCEPT_SCREEN.getRouteId()) {
                     ConceptScreen()
                 }
 
-                composable("user_stats_screen") {
+                composable(Screen.USER_STATS_SCREEN.getRouteId()) {
                     UserStatsScreen()
                 }
             }
