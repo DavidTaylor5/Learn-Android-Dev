@@ -4,6 +4,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -44,8 +46,7 @@ fun MenuScreen(
         // 4 x 4 buttons
         ButtonGrid(
             //modifier = Modifier.fillMaxSize(),
-            items = listOf( ButtonAction(description = "option", action={}), ButtonAction(description = "option", action={}), ButtonAction(description = "option", action={}), ButtonAction(description = "option", action={}), ButtonAction(description = "option", action={}), ButtonAction(description = "option", action={}) ),
-            rowCount = 2,
+            items = listOf( ButtonAction(description = "option", action={}), ButtonAction(description = "option", action={}), ButtonAction(description = "option", action={}), ButtonAction(description = "option", action={}), ButtonAction(description = "option", action={}), ButtonAction(description = "option", action={}), ButtonAction(description = "option", action={}) ),
             colCount = 3
         )
     }
@@ -55,25 +56,18 @@ fun MenuScreen(
 fun ButtonGrid(
     modifier: Modifier = Modifier,
     items: List<ButtonAction>,
-    rowCount: Int,
     colCount: Int
 ) {
-    Column() {
-        for(row in 0..rowCount) {
-            Row() {
-                for(col in 0..colCount) {
-                    val itemIndex = row * col + col
-                    if( itemIndex < items.size ) {
-                        Button(
-                            onClick = items[itemIndex].action
-                        ) {
-                            Text(
-                                text = items[itemIndex].description
-                            )
-                        }
-                    }
-
-                }
+    LazyVerticalGrid(
+        columns = GridCells.Fixed(colCount)
+    ) {
+        items(items.size) { index ->
+            Button(
+                onClick = items[index].action
+            ) {
+                Text(
+                    text = items[index].description
+                )
             }
         }
     }
