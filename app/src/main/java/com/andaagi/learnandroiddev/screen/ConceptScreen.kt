@@ -1,5 +1,7 @@
 package com.andaagi.learnandroiddev.screen
 
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -11,15 +13,19 @@ import com.andaagi.learnandroiddev.ui.theme.LearnAndroidDevTheme
 fun ConceptScreen(
     modifier: Modifier = Modifier
 ) {
-    Text(
-        text = "ConceptScreen!",
-        modifier = modifier
-    )
-
-    Button(
-        onClick = {}
+    Column(
+        modifier = Modifier.fillMaxSize()
     ) {
-        Text(text = "Navigate!")
+        Text(
+            text = "ConceptScreen!",
+            modifier = modifier
+        )
+
+        Button(
+            onClick = {}
+        ) {
+            Text(text = "Navigate!")
+        }
     }
 }
 

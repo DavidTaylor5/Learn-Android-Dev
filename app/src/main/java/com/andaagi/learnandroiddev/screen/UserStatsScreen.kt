@@ -1,5 +1,7 @@
 package com.andaagi.learnandroiddev.screen
 
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -8,16 +10,23 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.andaagi.learnandroiddev.ui.theme.LearnAndroidDevTheme
 
 @Composable
-fun UserStatsScreen(modifier: Modifier = Modifier) {
-    Text(
-        text = "UserStatsScreen!",
-        modifier = modifier
-    )
+fun UserStatsScreen(
+    modifier: Modifier = Modifier
+) {
 
-    Button(
-        onClick = {}
+    Column(
+        modifier = Modifier.fillMaxSize()
     ) {
-        Text(text = "Navigate!")
+        Text(
+            text = "UserStatsScreen!",
+            modifier = modifier
+        )
+
+        Button(
+            onClick = {}
+        ) {
+            Text(text = "Navigate!")
+        }
     }
 }
 
