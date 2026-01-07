@@ -30,7 +30,11 @@ User determines the number of questions, the topics, time limit or not. Option t
 3a) Quiz Page
 Question, Hint, Input Button, Skip, Submit.
 
+3b) Leaderboard Page
+
 4) Multiple Choice Quiz (Simpler, expects user to know output of code. )
+
+5) User Stats page
    
 Investigation Tasks
 

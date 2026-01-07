@@ -13,12 +13,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.andaagi.learnandroiddev.screen.MenuScreen
 import com.andaagi.learnandroiddev.ui.theme.LearnAndroidDevTheme
 import androidx.navigation.compose.rememberNavController
 import com.andaagi.learnandroiddev.constant.Screen
-import com.andaagi.learnandroiddev.screen.ConceptScreen
+import com.andaagi.learnandroiddev.screen.LeaderboardScreen
+import com.andaagi.learnandroiddev.screen.MainMenuScreen
+import com.andaagi.learnandroiddev.screen.QuizMenuScreen
 import com.andaagi.learnandroiddev.screen.QuizScreen
+import com.andaagi.learnandroiddev.screen.TopicMenuScreen
 import com.andaagi.learnandroiddev.screen.TopicScreen
 import com.andaagi.learnandroiddev.screen.UserStatsScreen
 
@@ -39,23 +41,31 @@ fun LearnAndroidDevApp() {
         ) { innerPadding ->
             NavHost(
                 navController = navController,
-                startDestination = Screen.MENU_SCREEN.getRouteId(),
+                startDestination = Screen.MAIN_MENU_SCREEN.getRouteId(),
                 modifier = Modifier.padding(innerPadding)
             ) {
-                composable(Screen.MENU_SCREEN.getRouteId()) {
-                    MenuScreen()
+                composable(Screen.MAIN_MENU_SCREEN.getRouteId()) {
+                    MainMenuScreen()
+                }
+
+                composable(Screen.QUIZ_MENU_SCREEN.getRouteId()) {
+                    QuizMenuScreen()
                 }
 
                 composable(Screen.QUIZ_SCREEN.getRouteId()) {
                     QuizScreen()
                 }
 
-                composable(Screen.TOPIC_SCREEN.getRouteId()) {
-                    TopicScreen()
+                composable(Screen.LEADERBOARD_SCREEN.getRouteId()) {
+                    LeaderboardScreen()
                 }
 
-                composable(Screen.CONCEPT_SCREEN.getRouteId()) {
-                    ConceptScreen()
+                composable(Screen.TOPIC_MENU_SCREEN.getRouteId()) {
+                    TopicMenuScreen()
+                }
+
+                composable(Screen.TOPIC_SCREEN.getRouteId()) {
+                    TopicScreen()
                 }
 
                 composable(Screen.USER_STATS_SCREEN.getRouteId()) {
