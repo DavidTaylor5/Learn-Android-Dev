@@ -10,14 +10,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.andaagi.learnandroiddev.ui.theme.LearnAndroidDevTheme
 
 @Composable
-fun ConceptScreen(
+fun QuizMenuScreen(
     modifier: Modifier = Modifier
 ) {
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
         Text(
-            text = "ConceptScreen!",
+            text = "QuizScreen!",
             modifier = modifier
         )
 
@@ -31,8 +31,8 @@ fun ConceptScreen(
 
 @Preview(showBackground = true)
 @Composable
-fun ConceptScreenPreview() {
+fun QuizMenuScreenPreview() {
     LearnAndroidDevTheme {
-        ConceptScreen()
+        QuizMenuScreen()
     }
 }

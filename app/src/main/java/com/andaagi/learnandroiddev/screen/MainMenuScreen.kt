@@ -2,7 +2,6 @@ package com.andaagi.learnandroiddev.screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -16,7 +15,7 @@ import com.andaagi.learnandroiddev.data.ButtonAction
 import com.andaagi.learnandroiddev.ui.theme.LearnAndroidDevTheme
 
 @Composable
-fun MenuScreen(
+fun MainMenuScreen(
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -77,6 +76,6 @@ fun ButtonGrid(
 @Composable
 fun MenuScreenPreview() {
     LearnAndroidDevTheme {
-        MenuScreen()
+        MainMenuScreen()
     }
 }
