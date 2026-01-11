@@ -1,8 +1,8 @@
 package com.andaagi.learnandroiddev.constant
 
 enum class Screen {
-    MAIN_MENU_SCREEN {
-        override fun getRouteId(): String = "MAIN_MENU_SCREEN"
+    LOGIN_SCREEN {
+        override fun getRouteId(): String = "LOGIN_SCREEN"
     },
     QUIZ_MENU_SCREEN {
         override fun getRouteId(): String = "QUIZ_MENU_SCREEN"

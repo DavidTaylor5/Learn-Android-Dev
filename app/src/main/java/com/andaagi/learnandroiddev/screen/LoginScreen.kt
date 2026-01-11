@@ -15,7 +15,7 @@ import com.andaagi.learnandroiddev.data.ButtonAction
 import com.andaagi.learnandroiddev.ui.theme.LearnAndroidDevTheme
 
 @Composable
-fun MainMenuScreen(
+fun LoginScreen(
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -76,6 +76,6 @@ fun ButtonGrid(
 @Composable
 fun MenuScreenPreview() {
     LearnAndroidDevTheme {
-        MainMenuScreen()
+        LoginScreen()
     }
 }
