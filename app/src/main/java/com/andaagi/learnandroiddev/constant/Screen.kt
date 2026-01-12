@@ -1,9 +1,22 @@
 package com.andaagi.learnandroiddev.constant
 
 enum class Screen {
-    MAIN_MENU_SCREEN {
-        override fun getRouteId(): String = "MAIN_MENU_SCREEN"
+    // Navigation without Scaffold
+    AUTH_SCREEN {
+        override fun getRouteId(): String = "AUTH_SCREEN"
     },
+    LOGIN_SCREEN {
+        override fun getRouteId(): String = "LOGIN_SCREEN"
+    },
+    SIGN_UP_SCREEN {
+        override fun getRouteId(): String = "SIGN_UP_SCREEN"
+    },
+    MAIN_SCAFFOLD {
+        override fun getRouteId(): String = "MAIN_SCAFFOLD"
+    },
+
+
+    // Screens with Scaffold
     QUIZ_MENU_SCREEN {
         override fun getRouteId(): String = "QUIZ_MENU_SCREEN"
     },
