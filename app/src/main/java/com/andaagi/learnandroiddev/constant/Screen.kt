@@ -34,6 +34,14 @@ enum class Screen {
     },
     USER_STATS_SCREEN {
         override fun getRouteId(): String = "USER_STATS_SCREEN"
+    },
+
+    NOTECARD_SCREEN {
+        override fun getRouteId(): String = "NOTECARD_SCREEN"
+    },
+
+    SYSTEM_DESIGN_SCREEN {
+        override fun getRouteId(): String = "SYSTEM_DESIGN_SCREEN"
     };
 
     abstract fun getRouteId(): String

@@ -17,7 +17,7 @@ fun TopicMenuScreen(
         modifier = Modifier.fillMaxSize()
     ) {
         Text(
-            text = "ConceptScreen!",
+            text = "TopicMenuScreen!",
             modifier = modifier
         )
 

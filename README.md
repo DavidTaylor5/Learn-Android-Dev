@@ -35,6 +35,12 @@ Question, Hint, Input Button, Skip, Submit.
 4) Multiple Choice Quiz (Simpler, expects user to know output of code. )
 
 5) User Stats page
+
+6) Note card functionality, flip animations, possible writing or recording an answer for playback
+
+7) I need a way to teach leetcode but also identify leetcode problems with high level solves.
+
+8) I also need functionality for system design. I need a database of all possible system design questions which I can just run through. 
    
 Investigation Tasks
 
@@ -53,3 +59,7 @@ Internet Functionality
 Answer Accuracy Util
 ...
 
+
+//TODO List
+
+1) Add a notecard tab / icon
