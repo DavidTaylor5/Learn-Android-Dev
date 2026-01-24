@@ -97,7 +97,7 @@ fun MainScaffold() {
     ) { innerPadding ->
         NavHost(
             navController = appController,
-            startDestination = Screen.TOPIC_MENU_SCREEN.getRouteId(),
+            startDestination = Screen.NOTECARD_SCREEN.getRouteId(),
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(Screen.QUIZ_MENU_SCREEN.getRouteId()) {
