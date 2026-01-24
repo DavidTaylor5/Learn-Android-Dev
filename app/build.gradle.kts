@@ -74,6 +74,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // Material 3 icons
+
     implementation("androidx.compose.material:material-icons-extended")
 
     implementation("com.google.dagger:hilt-android:2.51.1")
