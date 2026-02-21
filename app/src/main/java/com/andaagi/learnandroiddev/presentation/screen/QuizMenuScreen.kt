@@ -1,0 +1,38 @@
+package com.andaagi.learnandroiddev.presentation.screen
+
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import com.andaagi.learnandroiddev.presentation.ui.theme.LearnAndroidDevTheme
+
+@Composable
+fun QuizMenuScreen(
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = Modifier.fillMaxSize()
+    ) {
+        Text(
+            text = "QuizMenuScreen!",
+            modifier = modifier
+        )
+
+        Button(
+            onClick = {}
+        ) {
+            Text(text = "Navigate!")
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun QuizMenuScreenPreview() {
+    LearnAndroidDevTheme {
+        QuizMenuScreen()
+    }
+}

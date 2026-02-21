@@ -5,6 +5,8 @@ plugins {
     alias(libs.plugins.dagger.hilt)
     // Keep for Hilt compatibility with AGP
     id("kotlin-kapt")
+
+    kotlin("plugin.serialization")
 }
 
 android {
@@ -42,8 +44,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
+        }
     }
     buildFeatures {
         compose = true
@@ -74,9 +78,12 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // Material 3 icons
-
     implementation("androidx.compose.material:material-icons-extended")
 
+    // Hilt
     implementation("com.google.dagger:hilt-android:2.51.1")
     kapt("com.google.dagger:hilt-compiler:2.51.1")
+
+    // Kotlinx-serialization-json
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.10.0")
 }
