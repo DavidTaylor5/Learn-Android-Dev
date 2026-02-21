@@ -1,0 +1,16 @@
+{
+  "cards": [
+    {
+      "question": "What is a fragment in Android?",
+      "answer": "A Fragment is a modular UI component with a lifecycle heavily tied to a parent activity."
+    },
+    {
+      "question": "What is a Modifier in Compose?",
+      "answer": "A modifier modifies the spacing and position of a composable, such as padding and size."
+    },
+    {
+      "question": "What is context in Android?",
+      "answer": "Context is a way to access app resources, and Android systems like WindowManager and BatteryManager. It is also used for Android OS level operations like sending intents to start an Activity or Service. "
+    }
+  ]
+}
