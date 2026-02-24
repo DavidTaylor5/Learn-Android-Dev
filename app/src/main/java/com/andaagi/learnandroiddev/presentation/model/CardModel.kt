@@ -5,7 +5,7 @@ enum class CARD_SIDE {
     QUESTION_SIDE
 }
 
-data class CardData(
+data class CardModel(
     val question: String = "",
     val answer: String = "",
     val currSide: CARD_SIDE = CARD_SIDE.QUESTION_SIDE
