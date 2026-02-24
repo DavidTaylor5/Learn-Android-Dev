@@ -1,6 +1,6 @@
 package com.andaagi.learnandroiddev.presentation.state
 
-import com.andaagi.learnandroiddev.presentation.model.CardData
+import com.andaagi.learnandroiddev.presentation.model.CardModel
 
 
 enum class ScreenState {
@@ -11,5 +11,5 @@ enum class ScreenState {
 
 data class NotecardScreenState(
     val screen: ScreenState = ScreenState.MAIN_CARD_FUNC,
-    val currentCard: CardData = CardData()
+    val currentCard: CardModel = CardModel()
 )
